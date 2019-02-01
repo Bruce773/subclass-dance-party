@@ -1,5 +1,6 @@
 $(document).ready(function() {
   window.dancers = [];
+  // window.fish = [];
 
   $('.addDancerButton').on('click', function(event) {
     /* This function sets up the click handlers for the create-dancer
@@ -22,12 +23,29 @@ $(document).ready(function() {
 
     // make a dancer with a random position
 
-    var dancer = dancerMakerFunction(
+    var dancer = new dancerMakerFunction(
       $("body").height() * Math.random(),
       $("body").width() * Math.random(),
       Math.random() * 1000
     );
     $('body').append(dancer.$node);
   });
+  
+  // $('.addFishButton').on('click', function(event) {
+    
+  //   var makeFishName = $(this).data('data-create-fish');
+
+  //   // get the maker function for the kind of dancer we're supposed to make
+  //   var makeFishFunc = window[makeFishName];
+    
+  //   // make a dancer with a random position
+
+  //   var fish = makeFishFunc(
+  //     $("body").height() * Math.random(),
+  //     $("body").width() * Math.random(),
+  //     Math.random() * 1000
+  //   );
+  //   $('body').append(fish.$node);    
+  // });
 });
 
