@@ -51,11 +51,8 @@ makeFish.prototype.swim = function () {
 /*
 make fish drops a fish from the top of the aquarium and it 'falls' down to
 the center
-
 switch class on edge //make fish face different direction when making
 contact with the wall
-
 make fish move from left to right and right to left
-
 utilize inner height/inner width
 */

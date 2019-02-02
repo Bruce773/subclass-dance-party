@@ -51,6 +51,10 @@ body, a:link, a:visited, a:active{
   animation-timing-function: linear; */
 }
 
+.fish-icon:hover{
+  height: 30px;
+  width: 120px;
+}
 /* @keyframes fish {
   0%   {left:0px; top:0px;}
   10%  {left:50px; top:50px;}
@@ -75,6 +79,10 @@ body, a:link, a:visited, a:active{
   animation-direction: alternate;
   animation-iteration-count: infinite;
   animation-timing-function: linear; */
+}
+.shark-icon:hover{
+  height: 130px;
+  width: 130px;
 }
 
 /* @keyframes shark {
