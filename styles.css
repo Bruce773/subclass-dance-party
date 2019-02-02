@@ -1,12 +1,16 @@
-body, html{
-  height:100%;
+body,
+html {
+  height: 100%;
 }
-body{
-  background-image:url('src/openSea.jpg');
+body {
+  background-image: url('src/openSea.jpg');
   margin: 0px;
   font-size: 18px;
 }
-body, a:link, a:visited, a:active{
+body,
+a:link,
+a:visited,
+a:active {
   color: blue;
 }
 a {
@@ -14,49 +18,49 @@ a {
   border-width: 5px;
   border-style: solid;
   margin-top: 5px;
-  padding: 10px;
+  padding: 6px;
   font-size: 20px;
   border-radius: 5px;
   background-color: white;
 }
-a:hover{
+a:hover {
   font-size: 25px;
   border-color: lightblue;
 }
-.title{
-  padding:5px 12px;
-  float:right;
+.title {
+  padding: 3px 40px 0px 0px;
+  font-size: 25px;
+  float: right;
 }
-.topbar{
-  text-align:center;
-  height:auto;
+.topbar {
+  text-align: center;
+  height: auto;
   min-height: 50px;
-  background-color: lightgrey;
+  /* background-color: lightgrey; */
   padding-top: 20px;
 }
-.title{
-
+.title {
 }
 
-.dancer{
-  border:10px solid red;
-  border-radius:10px;
-  position:absolute;
+.dancer {
+  border: 10px solid red;
+  border-radius: 10px;
+  position: absolute;
 }
 /* .fish{
   position:absolute;
   z-index: 9;
 } */
 /* #moveable{ */
-  /* border: 1px solid; */
-  /* position: absolute; */
-  /* z-index: 9; */
+/* border: 1px solid; */
+/* position: absolute; */
+/* z-index: 9; */
 /* } */
 /* #drag{
   cursor: move;
   z-index: 10;
 } */
-.fish-icon{
+.fish-icon {
   height: 60px;
   width: 250px;
   position: absolute;
@@ -68,7 +72,7 @@ a:hover{
   animation-timing-function: linear; */
 }
 
-.fish-icon:hover{
+.fish-icon:hover {
   height: 30px;
   width: 120px;
 }
@@ -86,7 +90,7 @@ a:hover{
   100% {left:500px;top:0px;}
 } */
 
-.shark-icon{
+.shark-icon {
   height: 75px;
   width: 75px;
   position: absolute;
@@ -97,7 +101,7 @@ a:hover{
   animation-iteration-count: infinite;
   animation-timing-function: linear; */
 }
-.shark-icon:hover{
+.shark-icon:hover {
   height: 130px;
   width: 130px;
 }
