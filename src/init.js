@@ -76,4 +76,7 @@ $(document).ready(function () {
       faceOffShark += 45;
     });
   })
+  $('.shark-icon').on('mouseover', function(e) {
+    $('.shark-icon').css('height','120px','width','120px');
+  })
 });
