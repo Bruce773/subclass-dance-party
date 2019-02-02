@@ -1,7 +1,7 @@
 var makeFish = function (top, left) {
   // makeBlinky
   makeDancer.call(this, top, left);
-  this.$node = $('<span class="fish" id="drag"><img class="fish-icon" src="src/nemo.gif"></span>');
+  this.$node = $('<div class="ui-widget-content" id="drag"><img class="fish-icon" src="src/nemo.gif"></div>');
   // this.summonFish(top, left);
   // this.swim(top);
   let randomPosition = {

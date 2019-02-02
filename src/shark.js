@@ -1,6 +1,6 @@
 var makeShark = function (top, left) {
   makeDancer.call(this, top, left);
-  this.$node = $('<span class="fish" id="drag"><img class="shark-icon" src="src/biteShark.gif"></span>');
+  this.$node = $('<div class="ui-widget-content" id="drag"><img class="shark-icon" src="src/biteShark.gif"></div>');
   let randomPosition = {
     position: 'absolute',
     top: top,

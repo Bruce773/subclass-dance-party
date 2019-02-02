@@ -35,10 +35,10 @@ body, a:link, a:visited, a:active{
   /* position: absolute; */
   /* z-index: 9; */
 /* } */
-#drag{
+/* #drag{
   cursor: move;
   z-index: 10;
-}
+} */
 .fish-icon{
   height: 60px;
   width: 250px;
