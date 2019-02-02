@@ -1,9 +1,6 @@
-var makeFish = function (top, left) {
-  // makeBlinky
+var makeShark = function (top, left) {
   makeDancer.call(this, top, left);
-  this.$node = $('<span class="fish" id="drag"><img class="fish-icon" src="src/nemo.gif"></span>');
-  // this.summonFish(top, left);
-  // this.swim(top);
+  this.$node = $('<span class="fish" id="drag"><img class="shark-icon" src="src/biteShark.gif"></span>');
   let randomPosition = {
     position: 'absolute',
     top: top,
@@ -11,20 +8,14 @@ var makeFish = function (top, left) {
   this.$node.css(randomPosition);
   this.swim();
 }
-// makeFish.prototype.step = function() {
-//   makeDancer.prototype.step.call(this);
-// }
-makeFish.prototype = Object.create(makeDancer.prototype);
-makeFish.prototype.constructor = makeFish;
-
-makeFish.prototype.summonFish = function (top, left) {
-  // where it belongs on the page. See http://api.jquery.com/css/
+makeShark.prototype = Object.create(makeDancer.prototype);
+makeShark.prototype.constructor = makeShark;
+makeShark.prototype.summonFish = function (top, left) {
   this.setPosition(top, left);
 }
 
-makeFish.prototype.swim = function () {
+makeShark.prototype.swim = function () {
   var counter = this.left;
-  // var $$node = this.$node;
   let swimRight = (indicator) => {
     if (indicator < window.innerWidth) {
       indicator++;
@@ -47,15 +38,3 @@ makeFish.prototype.swim = function () {
   }
   swimRight(counter);
 }
-
-/*
-make fish drops a fish from the top of the aquarium and it 'falls' down to
-the center
-
-switch class on edge //make fish face different direction when making
-contact with the wall
-
-make fish move from left to right and right to left
-
-utilize inner height/inner width
-*/

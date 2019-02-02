@@ -1,16 +1,25 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Object Dance Party</title>
-    <link rel="stylesheet" type="text/css" href="styles.css" />
-    <script src="lib/jquery.js"></script>
-    <script src="src/dancer.js"></script>
-    <script src="src/blinkyDancer.js"></script>
-  </head>
-  <body>
-    <div class="topbar">
-      <span class="title">object dance party</span>
-      <a href="#" class="addDancerButton" data-dancer-maker-function-name="makeBlinkyDancer">add a blinky dancer</a>    </div>
-    <script src="src/init.js"></script>
-  </body>
+
+<head>
+  <title>Object Dance Party</title>
+  <link rel="stylesheet" type="text/css" href="styles.css" />
+  <script src="lib/jquery.js"></script>
+  <script src="src/dancer.js"></script>
+  <script src="src/blinkyDancer.js"></script>
+  <script src="src/fish.js"></script>
+  <script src="src/shark.js"></script>
+</head>
+
+<body id='moveable'>
+  <div class="topbar">
+    <span class="title">object dance party</span>
+    <a href="#" class="addDancerButton" data-dancer-maker-function-name="makeBlinkyDancer">add a blinky dancer</a>
+    <a href="#" class="addFishButton" data-create-fish="makeFish">Add Fish</a>
+    <a href="#" class="addSharkButton" data-create-shark="makeShark">Add Shark</a>
+  </div>
+  <div></div>
+  <script src="src/init.js"></script>
+</body>
+
 </html>

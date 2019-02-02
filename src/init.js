@@ -1,6 +1,7 @@
 $(document).ready(function() {
   window.dancers = [];
-  // window.fish = [];
+  window.schoolOfFish = [];
+  window.sharks = [];
 
   $('.addDancerButton').on('click', function(event) {
     /* This function sets up the click handlers for the create-dancer
@@ -31,21 +32,23 @@ $(document).ready(function() {
     $('body').append(dancer.$node);
   });
   
-  // $('.addFishButton').on('click', function(event) {
-    
-  //   var makeFishName = $(this).data('data-create-fish');
-
-  //   // get the maker function for the kind of dancer we're supposed to make
-  //   var makeFishFunc = window[makeFishName];
-    
-  //   // make a dancer with a random position
-
-  //   var fish = makeFishFunc(
-  //     $("body").height() * Math.random(),
-  //     $("body").width() * Math.random(),
-  //     Math.random() * 1000
-  //   );
-  //   $('body').append(fish.$node);    
-  // });
+  $('.addFishButton').on('click', function(event) {
+    var makeFishName = $(this).data('create-fish');
+    var makeFishFunc = window[makeFishName];
+    var fish = new makeFishFunc(
+      $("body").height() * Math.random(),
+      $("body").width() * Math.random()
+    );
+    $('body').append(fish.$node);
+  });
+  $('.addSharkButton').on('click', function(event) {
+    var makeSharkName = $(this).data('create-shark');
+    var makeSharkFunc = window[makeSharkName];
+    var shark = new makeSharkFunc(
+      $("body").height() * Math.random(),
+      $("body").width() * Math.random()
+    );
+    $('body').append(shark.$node);
+  });
 });
 
