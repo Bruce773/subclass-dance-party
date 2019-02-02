@@ -9,18 +9,7 @@
   <script src="src/blinkyDancer.js"></script>
   <script src="src/fish.js"></script>
   <script src="src/shark.js"></script>
-  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-  <link rel="stylesheet" href="/resources/demos/style.css">
-  <style>
-  #draggable { width: 150px; height: 150px; padding: 0.5em; }
-  </style>
-  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-  <script>
-  $( function() {
-    $( "#drag" ).draggable();
-  } );
-  </script>
+  <script src="src/init.js"></script>
 </head>
 
 <body id='moveable'>
@@ -29,9 +18,10 @@
     <a href="#" class="addDancerButton" data-dancer-maker-function-name="makeBlinkyDancer">add a blinky dancer</a>
     <a href="#" class="addFishButton" data-create-fish="makeFish">Add Fish</a>
     <a href="#" class="addSharkButton" data-create-shark="makeShark">Add Shark</a>
+    <a href="#" class="lineUp">Line Up</a>
+    <a href="#" class="faceOff">Face Off</a>
   </div>
-  <div></div>
-  <script src="src/init.js"></script>
+  
 </body>
 
 </html>

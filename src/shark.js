@@ -40,4 +40,8 @@ makeShark.prototype.swim = function() {
     }
   };
   swimRight(counter);
+<<<<<<< HEAD
 };
+=======
+}
+>>>>>>> subclass/master
