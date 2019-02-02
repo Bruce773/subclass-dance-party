@@ -70,16 +70,17 @@ $(document).ready(function () {
     });
   })
   $('.faceOff').on('click', function(event) {
-    let faceOffCount = 0;
+    let faceOffFish = 0;
+    let faceOffShark = 0;
     window.schoolOfFish.forEach(function (item) {
       //set item.$node.setPosition(distanceBetweenEachCounter + 5 , window.innerHeight/2)
-      item.setPosition(faceOffCount + 100, window.innerHeight / 10);
-      faceOffCount += 20;
+      item.setPosition(faceOffFish + 100, window.innerHeight / 10);
+      faceOffFish += 45;
     });
     window.sharks.forEach(function (item) {
       //set item.$node.setPosition(distanceBetweenEachCounter + 5 , window.innerHeight/2)
-      item.setPosition(faceOffCount + 10, window.innerHeight * 1.8);
-      faceOffCount += 20;
+      item.setPosition(faceOffShark + 100, window.innerHeight * 1.8);
+      faceOffShark += 45;
     });
   })
 });
