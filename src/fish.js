@@ -1,13 +1,13 @@
 var makeFish = function (top, left) {
-  // makeBlinky
   makeDancer.call(this, top, left);
-  this.$node = $('<div class="ui-widget-content" id="drag"><img class="fish-icon" src="src/nemo.gif"></div>');
-  // this.summonFish(top, left);
-  // this.swim(top);
   let randomPosition = {
     position: 'absolute',
     top: top,
-    left: left,};
+    left: left
+  };
+  this.fishImages = ['dorySpeakingWhale.gif', 'scaredFish.gif', 'nemo.gif']
+  this.summonFish();
+  this.$node = $(`<div class="ui-widget-content" id="drag"><img class="fish-icon" src="src/${this.randomFishImg}"></div>`);
   this.$node.css(randomPosition);
   this.swim();
 }
@@ -19,7 +19,8 @@ makeFish.prototype.constructor = makeFish;
 
 makeFish.prototype.summonFish = function (top, left) {
   // where it belongs on the page. See http://api.jquery.com/css/
-  this.setPosition(top, left);
+  // this.setPosition(top, left);
+  this.randomFishImg = this.fishImages[Math.floor(Math.random() * (this.fishImages.length))];
 }
 
 makeFish.prototype.swim = function () {
