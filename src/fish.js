@@ -1,29 +1,35 @@
-var makeFish = function (top, left) {
+var makeFish = function(top, left) {
   makeDancer.call(this, top, left);
   let randomPosition = {
     position: 'absolute',
     top: top,
     left: left
   };
-  this.fishImages = ['dorySpeakingWhale.gif', 'scaredFish.gif', 'nemo.gif']
+  this.fishImages = ['dorySpeakingWhale.gif', 'scaredFish.gif', 'nemo.gif'];
   this.summonFish();
-  this.$node = $(`<div class="ui-widget-content" id="drag"><img class="fish-icon" src="src/${this.randomFishImg}"></div>`);
+  this.$node = $(
+    `<div class="ui-widget-content" id="drag"><img class="fish-icon" src="src/${
+      this.randomFishImg
+    }"></div>`
+  );
   this.$node.css(randomPosition);
   this.swim();
-}
+};
 // makeFish.prototype.step = function() {
 //   makeDancer.prototype.step.call(this);
 // }
 makeFish.prototype = Object.create(makeDancer.prototype);
 makeFish.prototype.constructor = makeFish;
 
-makeFish.prototype.summonFish = function (top, left) {
+makeFish.prototype.summonFish = function(top, left) {
   // where it belongs on the page. See http://api.jquery.com/css/
   // this.setPosition(top, left);
-  this.randomFishImg = this.fishImages[Math.floor(Math.random() * (this.fishImages.length))];
-}
+  this.randomFishImg = this.fishImages[
+    Math.floor(Math.random() * this.fishImages.length)
+  ];
+};
 
-makeFish.prototype.swim = function () {
+makeFish.prototype.swim = function() {
   var counter = this.left;
   // var $$node = this.$node;
   let swimRight = (indicator) => {
@@ -35,7 +41,7 @@ makeFish.prototype.swim = function () {
     } else {
       // setTimeout(swimLeft(),1000);
     }
-  }
+  };
   let swimLeft = (indicator) => {
     if (indicator > 0) {
       indicator--;
@@ -45,9 +51,9 @@ makeFish.prototype.swim = function () {
     } else {
       setTimeout(swimRight(), 1000);
     }
-  }
+  };
   swimRight(counter);
-}
+};
 
 /*
 make fish drops a fish from the top of the aquarium and it 'falls' down to
