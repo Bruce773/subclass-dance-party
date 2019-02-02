@@ -13,7 +13,7 @@ var makeShark = function(top, left) {
     }"></div>`
   );
   this.$node.css(randomPosition);
-  this.swim();
+  this.swim(); 
 };
 makeShark.prototype = Object.create(makeDancer.prototype);
 makeShark.prototype.constructor = makeShark;
