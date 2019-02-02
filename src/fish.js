@@ -5,6 +5,7 @@ var makeFish = function(top, left) {
     top: top,
     left: left
   };
+  this.hasPartner = false;
   this.fishImages = ['dorySpeakingWhale.gif', 'scaredFish.gif', 'nemo.gif'];
   this.summonFish();
   this.$node = $(

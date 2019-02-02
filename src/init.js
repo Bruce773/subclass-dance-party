@@ -33,6 +33,7 @@ $(document).ready(function () {
   });
 
   $('.addFishButton').on('click', function (event) {
+    console.log('add fish ran')
     var makeFishName = $(this).data('create-fish');
     var makeFishFunc = window[makeFishName];
     var fish = new makeFishFunc(
@@ -43,6 +44,7 @@ $(document).ready(function () {
     $('body').append(fish.$node);
   });
   $('.addSharkButton').on('click', function (event) {
+    console.log('add Shark ran')
     var makeSharkName = $(this).data('create-shark');
     var makeSharkFunc = window[makeSharkName];
     var shark = new makeSharkFunc(
@@ -54,7 +56,7 @@ $(document).ready(function () {
   });
 
   $('.lineUp').on('click', function (event) {
-    //create a counter var
+    console.log('lineUp ran');
     let distanceBetweenEachCounter = 0;
     // iterate over schoolOfFish and sharks
     window.schoolOfFish.forEach(function (item) {
@@ -66,7 +68,9 @@ $(document).ready(function () {
       distanceBetweenEachCounter += 40;
     });
   });
+
   $('.faceOff').on('click', function (event) {
+    console.log('faceOff ran');
     let faceOffFish = 0;
     let faceOffShark = 0;
     window.schoolOfFish.forEach(function (item) {
@@ -78,7 +82,24 @@ $(document).ready(function () {
       faceOffShark += 45;
     });
   });
-  $('.shark-icon').on('mouseover', function (e) {
-    $('.shark-icon').css('height', '120px', 'width', '120px');
+  // $('.shark-icon').on('mouseover', function (event) {
+  //   $('.shark-icon').css('height', '120px', 'width', '120px');
+  // });
+  $('.findPartner').on('click', function(event) {
+    console.log('find parter ran')
+    for(let i = 0; i < window.schoolOfFish.length; i++) {
+      if (window.sharks[i]) {
+        var fishTop = $(window.schoolOfFish[i].$node).css("top");
+        var fishLeft = $(window.schoolOfFish[i].$node).css("left");
+        console.log(fishTop, fishLeft);
+        window.sharks[i].setPosition(fishTop, fishLeft);
+        // window.sharks[i].hasPartner = true;
+        // window.schoolOfFish[i].hasPartner = true;
+      } else {
+        break;
+      }
+    }
+    
   });
+  
 });

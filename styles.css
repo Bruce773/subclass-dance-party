@@ -64,6 +64,7 @@ a:hover {
   height: 60px;
   width: 250px;
   position: absolute;
+  z-index: 0;
   /* animation-name:fish;
   animation-duration: 10s;
   animation-delay: 2s;
@@ -94,6 +95,7 @@ a:hover {
   height: 75px;
   width: 75px;
   position: absolute;
+  z-index: 1;
   /* animation-name:shark;
   animation-duration: 5s;
   animation-delay: 2s;

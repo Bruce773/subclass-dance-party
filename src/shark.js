@@ -5,6 +5,7 @@ var makeShark = function(top, left) {
     top: top,
     left: left
   };
+  this.hasPartner = false;
   this.sharkImages = ['biteShark.gif', 'greatWhite.gif', 'leftShark.gif'];
   this.summonFish();
   this.$node = $(
@@ -19,6 +20,7 @@ makeShark.prototype = Object.create(makeDancer.prototype);
 makeShark.prototype.constructor = makeShark;
 makeShark.prototype.summonFish = function(top, left) {
   // this.setPosition(top, left);
+  // console.log(this.$node);
   this.randomSharkImg = this.sharkImages[
     Math.floor(Math.random() * this.sharkImages.length)
   ];
