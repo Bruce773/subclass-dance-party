@@ -1,9 +1,9 @@
-$(document).ready(function() {
+$(document).ready(function () {
   window.dancers = [];
   window.schoolOfFish = [];
   window.sharks = [];
 
-  $('.addDancerButton').on('click', function(event) {
+  $('.addDancerButton').on('click', function (event) {
     /* This function sets up the click handlers for the create-dancer
      * buttons on dancefloor.html. You should only need to make one small change to it.
      * As long as the "data-dancer-maker-function-name" attribute of a
@@ -32,7 +32,7 @@ $(document).ready(function() {
     $('body').append(dancer.$node);
   });
 
-  $('.addFishButton').on('click', function(event) {
+  $('.addFishButton').on('click', function (event) {
     var makeFishName = $(this).data('create-fish');
     var makeFishFunc = window[makeFishName];
     var fish = new makeFishFunc(
@@ -42,7 +42,7 @@ $(document).ready(function() {
     window.schoolOfFish.push(fish);
     $('body').append(fish.$node);
   });
-  $('.addSharkButton').on('click', function(event) {
+  $('.addSharkButton').on('click', function (event) {
     var makeSharkName = $(this).data('create-shark');
     var makeSharkFunc = window[makeSharkName];
     var shark = new makeSharkFunc(
@@ -53,28 +53,32 @@ $(document).ready(function() {
     $('body').append(shark.$node);
   });
 
-  $('.lineUp').on('click', function(event) {
+  $('.lineUp').on('click', function (event) {
     //create a counter var
     let distanceBetweenEachCounter = 0;
     // iterate over schoolOfFish and sharks
+    window.schoolOfFish.forEach(function (item) {
+      item.setPosition(window.innerHeight / 10, distanceBetweenEachCounter);
+      distanceBetweenEachCounter += 40;
+    })
+    window.sharks.forEach(function (item) {
+      item.setPosition(window.innerHeight / 10, distanceBetweenEachCounter);
+      distanceBetweenEachCounter += 40;
+    });
   });
-  window.sharks.forEach(function(item) {
-    item.setPosition(window.innerHeight / 10, distanceBetweenEachCounter);
-    distanceBetweenEachCounter += 40;
-  });
-  $('.faceOff').on('click', function(event) {
+  $('.faceOff').on('click', function (event) {
     let faceOffFish = 0;
     let faceOffShark = 0;
-    window.schoolOfFish.forEach(function(item) {
+    window.schoolOfFish.forEach(function (item) {
       item.setPosition(faceOffFish + 100, window.innerHeight / 10);
       faceOffFish += 45;
     });
-    window.sharks.forEach(function(item) {
+    window.sharks.forEach(function (item) {
       item.setPosition(faceOffShark + 100, window.innerHeight * 1.8);
       faceOffShark += 45;
     });
   });
-  $('.shark-icon').on('mouseover', function(e) {
+  $('.shark-icon').on('mouseover', function (e) {
     $('.shark-icon').css('height', '120px', 'width', '120px');
   });
 });
