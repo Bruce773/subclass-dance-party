@@ -58,7 +58,6 @@ $(document).ready(function () {
   $('.lineUp').on('click', function (event) {
     console.log('lineUp ran');
     let distanceBetweenEachCounter = 0;
-    // iterate over schoolOfFish and sharks
     window.schoolOfFish.forEach(function (item) {
       item.setPosition(window.innerHeight / 10, distanceBetweenEachCounter);
       distanceBetweenEachCounter += 40;
@@ -82,19 +81,14 @@ $(document).ready(function () {
       faceOffShark += 45;
     });
   });
-  // $('.shark-icon').on('mouseover', function (event) {
-  //   $('.shark-icon').css('height', '120px', 'width', '120px');
-  // });
+  
   $('.findPartner').on('click', function(event) {
     console.log('find parter ran')
     for(let i = 0; i < window.schoolOfFish.length; i++) {
       if (window.sharks[i]) {
         var fishTop = $(window.schoolOfFish[i].$node).css("top");
         var fishLeft = $(window.schoolOfFish[i].$node).css("left");
-        console.log(fishTop, fishLeft);
         window.sharks[i].setPosition(fishTop, fishLeft);
-        // window.sharks[i].hasPartner = true;
-        // window.schoolOfFish[i].hasPartner = true;
       } else {
         break;
       }

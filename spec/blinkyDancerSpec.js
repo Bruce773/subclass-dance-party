@@ -31,4 +31,20 @@ describe('blinkyDancer', function() {
       expect(blinkyDancer.step.callCount).to.be.equal(2);
     });
   });
+
+});
+describe('fish', function() {
+  var newFish;
+  beforeEach(function() {
+    clock = sinon.useFakeTimers();
+    newFish = new makeFish(50,25);
+    // blinkyDancer = new makeBlinkyDancer(10, 20, timeBetweenSteps);
+  });
+  it('should have a jQuery $node object', function() {
+    expect(newFish.$node).to.be.an.instanceof(jQuery);
+  });
+
+  it('should have a summon Fish method', function() {
+    expect(typeof newFish.summonFish).to.equal('function');
+  });
 });
